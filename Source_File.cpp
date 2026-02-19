@@ -1,5 +1,6 @@
 #include "Source_File.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 /*
@@ -93,3 +94,22 @@ string findLongestWork(string words[], int size){
 Create a program where the user first enters how many numbers they want to enter,
 then take these and store them in a vector. Create a function that checks if the number is even or odd and then returns the amount of even numbers.
 */
+
+void areWeEvenSteven()
+{
+    vector<int> numbers;
+    int userInput;
+
+    cout << "Enter random numbers, enter 0 to stop: " << endl;
+    while(cin >> userInput){ // loop the possibility to enter the number
+        if (userInput == 0){break;} // if input is zero, stop
+        numbers.push_back(userInput); // put the input into the vector
+    }
+    
+    cout<< "Here comes the number you have typed in: " << endl;
+
+    // loop through the vector and print outwhat contains
+    for (int i : numbers){
+        cout << i << " ";
+    }
+}
