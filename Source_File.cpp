@@ -106,10 +106,27 @@ void areWeEvenSteven()
         numbers.push_back(userInput); // put the input into the vector
     }
     
-    cout<< "Here comes the number you have typed in: " << endl;
+    cout<< "Here comes the numbers that are even from the one you typed in: " << endl;
 
-    // loop through the vector and print outwhat contains
+    // loop through the vector and print out what contains
     for (int i : numbers){
-        cout << i << " ";
+        int even = returnEvenNumbers(i);
+
+        if (even != 0)
+        {
+            cout << i << " ";
+        }
+    }
+}
+
+int returnEvenNumbers(int i)
+{
+    if (i % 2 == 0)
+    {
+        return i;
+    }
+    else
+    {
+        return 0;
     }
 }

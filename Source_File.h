@@ -9,6 +9,7 @@ float taxCalculation(float amount);
 bool doorman(int userAge);
 string findLongestWork(string words[], int size);
 void areWeEvenSteven();
+int returnEvenNumbers(int i);
 
 
 #endif
