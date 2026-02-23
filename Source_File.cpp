@@ -56,7 +56,8 @@ float taxCalculation(float amount)
 /*
 4. Doorman
 Create a program where the user gets to enter their age.
-Create a function that takes the entered value and checks if they are over 18. The function should return true or false;
+Create a function that takes the entered value and checks if they are over 18. 
+The function should return true or false;
 */
 
 bool doorman(int userAge)
@@ -71,7 +72,8 @@ bool doorman(int userAge)
 
 /*
 5. Professional yapper
-Create a function named findLongestWord() that takes an input of array of strings. The function should return and print the longest word.
+Create a function named findLongestWord() that takes an input of array of strings. 
+The function should return and print the longest word.
 */
 
 string findLongestWork(string words[], int size){
@@ -92,7 +94,8 @@ string findLongestWork(string words[], int size){
 /*
 6. Are we Even, Steven?
 Create a program where the user first enters how many numbers they want to enter,
-then take these and store them in a vector. Create a function that checks if the number is even or odd and then returns the amount of even numbers.
+then take these and store them in a vector. 
+Create a function that checks if the number is even or odd and then returns the amount of even numbers.
 */
 
 void areWeEvenSteven()
@@ -129,4 +132,85 @@ int returnEvenNumbers(int i)
     {
         return 0;
     }
+}
+
+// vector is a dynamic array - it can grow and shrink as you add or remove elements
+
+/*
+add element - numbers.push_back(10); - adds 10 to the end
+remove last element - numbers.pop_back(); - removes the last element
+access element - numbers[2] - accessing the third element
+Size - numbers.size() - returns how many elements
+Loop through - for(int x : numbers) {...} - range-based loop
+*/
+
+void vectorTraining()
+{
+    vector<int> numbers;
+    int userInputInt;
+
+    cout << "Enter the numbers to store in the vector; " << endl;
+    cin >> userInputInt;
+    numbers.push_back(userInputInt);
+
+    for(int x : numbers)
+    {
+        cout << x << " " << endl;
+    }
+}
+
+/*
+8. By later calculations
+Create a program that takes in two numbers and one operator (make sure to use error handling for I/O).
+
+Create a function that takes the two numbers, operator and a callback function.
+The operator should decide which operation to be performed and the callback function shall print out the result
+*/
+
+double add(double a, double b){
+    return a + b;
+}
+
+double substract (double a, double b){
+    return a * b ;
+}
+
+double division (double a, double b){
+    return a / b;
+}
+
+double multiply (double a, double b){
+    return a * b;
+}
+
+void printResult(double result){
+    cout << "Result: " << result <<endl;
+}
+
+void calculate(double a, double b, string op){
+    double result; 
+
+    if (op == "+"){result = add(a,b);}
+    else if (op == "-"){result = substract(a,b);}
+    else if (op == "/"){result = division(a,b);}
+    else if (op == "*"){result = multiply(a,b);}
+    else {cout << "Wrong input!"<< endl;}
+
+    printResult(result);
+}
+
+void byLaterCalculation()
+{
+    double userNumberOne;
+    double userNumberTwo;
+    string operatorChosen;
+
+    cout << "Enter your first number: " << endl;
+    cin >> userNumberOne;
+    cout << "Enter your second number: " << endl;
+    cin >> userNumberTwo;
+    cout << "Choose the operator for the given numbers (+, -, /, *):" << endl;
+    cin >> operatorChosen;
+
+    calculate(userNumberOne, userNumberTwo, operatorChosen);
 }

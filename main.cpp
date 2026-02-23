@@ -10,6 +10,8 @@ int main()
 //std::string singleWord[6] = {"Hi", "Dawid", "Oskar", "Huehuehue", "Kiki", "Koko"};
 //std::string longest = findLongestWork(singleWord, 6);
 //std::cout << longest << std::endl;
-areWeEvenSteven();
+//areWeEvenSteven();
+//void vectorTraining();
+byLaterCalculation();
 return 0;
 }
