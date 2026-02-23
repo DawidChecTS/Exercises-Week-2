@@ -167,25 +167,11 @@ Create a function that takes the two numbers, operator and a callback function.
 The operator should decide which operation to be performed and the callback function shall print out the result
 */
 
-double add(double a, double b){
-    return a + b;
-}
-
-double substract (double a, double b){
-    return a * b ;
-}
-
-double division (double a, double b){
-    return a / b;
-}
-
-double multiply (double a, double b){
-    return a * b;
-}
-
-void printResult(double result){
-    cout << "Result: " << result <<endl;
-}
+double add(double a, double b){return a + b;}
+double substract (double a, double b){return a * b;}
+double division (double a, double b){return a / b;}
+double multiply (double a, double b){return a * b;}
+void printResult(double result){cout << "Result: " << result <<endl;}
 
 void calculate(double a, double b, string op){
     double result; 
@@ -213,4 +199,22 @@ void byLaterCalculation()
     cin >> operatorChosen;
 
     calculate(userNumberOne, userNumberTwo, operatorChosen);
+}
+
+/*
+9. Overloading everywhere
+Create an overloaded function that adds two arguments together. It should be able to take the following:
+String Float Int Char
+*/
+
+int addThemTogether(int a, int b){ return a + b;}
+float addThemTogether(float a, float b, float c){ return a + b +c;}
+string addThemTogether(string a, string b){ return a + b;}
+char addThemTogether(char a, char b){ return a + b;}
+
+void testOverloading(){
+    addThemTogether(4,6);
+    addThemTogether(4.32, 2.53, 1.23);
+    addThemTogether("a", "b");
+    addThemTogether('#', '&');
 }
