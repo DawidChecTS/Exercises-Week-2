@@ -12,6 +12,7 @@ int main()
 //std::cout << longest << std::endl;
 //areWeEvenSteven();
 //void vectorTraining();
-byLaterCalculation();
+//byLaterCalculation();
+generateRandomNumbers();
 return 0;
 }

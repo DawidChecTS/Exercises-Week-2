@@ -18,4 +18,6 @@ double division (double a, double b);
 double multiply (double a, double b);
 void printResult(double result);
 void calculate(double a, double b, string op);
+void generateRandomNumbers();
+void printOutTheResults(int a);
 #endif

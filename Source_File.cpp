@@ -1,7 +1,9 @@
 #include "Source_File.h"
-#include <iostream>
-#include <vector>
-using namespace std;
+#include <iostream> 
+#include <vector> // to use vectors
+#include <cstdlib> // for rand() function
+#include <ctime> // for time() function
+using namespace std; // to skip std::
 
 /*
 1. Hello World
@@ -218,3 +220,33 @@ void testOverloading(){
     addThemTogether("a", "b");
     addThemTogether('#', '&');
 }
+
+
+/*
+11. Get your numbers in order
+Create a program that generates 10 numbers between 1 and 100 and adds it to a list. 
+Then sort it by descending order.
+Print out the result after the sort.
+*/
+
+void generateRandomNumbers(){
+    vector<int> storedNumbers;
+    srand(time(0)); // Different numbers on each program run. (seeding)
+
+    for(int i = 1; i <= 10; i++){
+    int randomNumber = (rand() % 100 + 1); // generate a random number in between 1 and 100
+    printOutTheResults(randomNumber);
+    };
+}
+
+/*
+void sortThenNumbers(){
+
+}
+*/
+void printOutTheResults(int a){
+    cout << "Random number: " << a << endl;
+
+}
+
+
