@@ -3,7 +3,9 @@
 #include <vector> // to use vectors
 #include <cstdlib> // for rand() function
 #include <ctime> // for time() function
+#include <algorithm> // for sort() funtion
 using namespace std; // to skip std::
+
 
 /*
 1. Hello World
@@ -229,24 +231,29 @@ Then sort it by descending order.
 Print out the result after the sort.
 */
 
+void printOutTheResults(int a){
+    cout << "Random number: " << a << endl;
+
+}
+
 void generateRandomNumbers(){
     vector<int> storedNumbers;
     srand(time(0)); // Different numbers on each program run. (seeding)
 
     for(int i = 1; i <= 10; i++){
     int randomNumber = (rand() % 100 + 1); // generate a random number in between 1 and 100
-    printOutTheResults(randomNumber);
+    storedNumbers.push_back(randomNumber); // pushing the generated number into the vector
+    };
+
+    sort(storedNumbers.begin(), storedNumbers.end()); // sorting the numbers generated from the smallest to the biggest
+
+    cout << "The list of your numbers, sorted from the smallest: " << endl;
+
+    for (int n : storedNumbers){
+        cout << " " << n;
     };
 }
 
-/*
-void sortThenNumbers(){
 
-}
-*/
-void printOutTheResults(int a){
-    cout << "Random number: " << a << endl;
-
-}
 
 
