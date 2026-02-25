@@ -13,6 +13,9 @@ int main()
 //areWeEvenSteven();
 //void vectorTraining();
 //byLaterCalculation();
-generateRandomNumbers();
+//generateRandomNumbers();
+//askForInput();
+//printEvenOrOdd();
+askUser();
 return 0;
 }

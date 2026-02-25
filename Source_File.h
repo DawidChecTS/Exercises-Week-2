@@ -20,4 +20,17 @@ void printResult(double result);
 void calculate(double a, double b, string op);
 void generateRandomNumbers();
 void printOutTheResults(int a);
+void askForInput();
+double divisionFun(double a, double b);
+double multiplyFun(double a, double b);
+double substractionFun(double a, double b);
+double additionFun(double a, double b);
+void printTheResult(double a);
+void calculating(char c, double a, double b);
+bool isEven(int number);
+void printEvenOrOdd();
+void askUser();
+void printConvertedValue(double value);
+double convertToCelsuis(double number);
+double convertToFarhenheit(double number);
 #endif

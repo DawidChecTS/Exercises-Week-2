@@ -254,6 +254,98 @@ void generateRandomNumbers(){
     };
 }
 
+void askForInput(){
+    char userInputOperator;
+    double userNumberOne;
+    double userNumberTwo;
 
+    cout << "Give me first number: " << endl;
+    cin >> userNumberOne;
+    cout << "Give me second number: " << endl;
+    cin >> userNumberTwo;
+    cout << "Now, the operator(+ - * /): ";
+    cin >> userInputOperator;
 
+    calculating(userInputOperator, userNumberOne, userNumberTwo);
+}
 
+void calculating(char c, double a, double b){
+    double result;
+    bool isInputValid = true;
+
+    if (c == '+'){result = additionFun(a, b);}
+    else if (c == '-'){result = substractionFun(a, b);}
+    else if (c == '*'){result = multiplyFun(a, b);}
+    else if (c == '/'){result = divisionFun(a, b);}
+    else{isInputValid = false; cout << "Wrong Input!";};
+
+    if (isInputValid){printTheResult(result);}
+}
+
+double additionFun(double a, double b){return a + b;}
+double substractionFun(double a, double b){return a - b;}
+double multiplyFun(double a, double b){return a * b;}
+double divisionFun(double a, double b){return a / b;}
+
+void printTheResult(double a){
+    cout << "The result is: " << a << endl;
+}
+
+bool isEven(int number){
+    if (number % 2 == 0)
+    {
+        return true;
+    }
+    else return false;
+    // return number % 2 == 0; the comparison already produces true or false
+}
+
+void printEvenOrOdd(){
+    double userInput;
+
+    cout << "Entery your number and I will tell you if the number is even or odd: ";
+    cin >> userInput;
+
+    if (isEven(userInput)){
+        cout << "Your number " << userInput << " is a even number!" << endl; 
+    }
+    else {
+        cout << "Your number " << userInput << " is an odd number!" << endl;
+    }
+}
+
+double convertToFarhenheit(double number){
+    double convertedValue = (number * 1.8) + 32;
+    return convertedValue;
+}
+
+double convertToCelsuis(double number){
+    double convertedValue = (number - 32) / 1.8;
+    return convertedValue;
+}
+
+void printConvertedValue(double value){
+    cout << "You convered temperature is: " << value << endl;
+}
+
+void askUser(){
+    double userTemp;
+    double userChoice;
+    double convertedTemp;
+
+    cout << "Choose with the number what temperature to what you would like to convert?:" << endl;
+    cout << "1.Celcius to Farenheit" << endl;
+    cout << "2.Farenheit to Celcius" << endl;
+    cin >> userChoice;
+    cout << "What is the temp you would like to convert?: " << endl;
+    cin >> userTemp;
+
+    if (userChoice == 1){
+        convertedTemp = convertToFarhenheit(userTemp);
+        printConvertedValue(convertedTemp);
+    }
+    else if (userChoice == 2){
+        convertedTemp = convertToCelsuis(userTemp);
+        printConvertedValue(convertedTemp);
+    }
+}
