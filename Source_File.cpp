@@ -314,6 +314,8 @@ void printEvenOrOdd(){
     }
 }
 
+//////////////////////////////////////////////////////////////////////////
+
 double convertToFarhenheit(double number){
     double convertedValue = (number * 1.8) + 32;
     return convertedValue;
@@ -328,24 +330,46 @@ void printConvertedValue(double value){
     cout << "You convered temperature is: " << value << endl;
 }
 
-void askUser(){
+void printTempQuestion(){
+    cout << "What is the temp you would like to convert?: " << endl;
+}
+
+void printErrorMessege(){
+    cout << "You typed in wrong input, try again!" << endl;
+}
+
+bool isUserInputValid(int a){
+    return a == 1 || a == 2 || a == 3 ;
+}
+
+void runProgram(){
+
     double userTemp;
     double userChoice;
     double convertedTemp;
 
-    cout << "Choose with the number what temperature to what you would like to convert?:" << endl;
-    cout << "1.Celcius to Farenheit" << endl;
-    cout << "2.Farenheit to Celcius" << endl;
-    cin >> userChoice;
-    cout << "What is the temp you would like to convert?: " << endl;
-    cin >> userTemp;
-
-    if (userChoice == 1){
-        convertedTemp = convertToFarhenheit(userTemp);
-        printConvertedValue(convertedTemp);
-    }
-    else if (userChoice == 2){
-        convertedTemp = convertToCelsuis(userTemp);
-        printConvertedValue(convertedTemp);
-    }
+        while (true){
+            cout << "Choose with the number what temperature to what you would like to convert?:" << endl;
+            cout << "1.Celcius to Farenheit" << endl;
+            cout << "2.Farenheit to Celcius" << endl;
+            cout << "3.Exit" << endl;
+            cin >> userChoice;
+            
+            if (isUserInputValid(userChoice)){
+                if (userChoice == 1){
+                    printTempQuestion();
+                    cin >> userTemp;
+                    convertedTemp = convertToFarhenheit(userTemp);
+                    printConvertedValue(convertedTemp);
+                    }
+                else if (userChoice == 2){
+                    printTempQuestion();
+                    cin >> userTemp;
+                    convertedTemp = convertToCelsuis(userTemp);
+                    printConvertedValue(convertedTemp);
+                }
+                else if (userChoice == 3){break;}
+            }
+            else {printErrorMessege();}
+        }        
 }

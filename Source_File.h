@@ -29,8 +29,12 @@ void printTheResult(double a);
 void calculating(char c, double a, double b);
 bool isEven(int number);
 void printEvenOrOdd();
-void askUser();
+void runProgram();
 void printConvertedValue(double value);
 double convertToCelsuis(double number);
 double convertToFarhenheit(double number);
+void printTempQuestion();
+void printErrorMessege();
+bool isUserInputValid();
+void runProgram();
 #endif

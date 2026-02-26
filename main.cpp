@@ -16,6 +16,6 @@ int main()
 //generateRandomNumbers();
 //askForInput();
 //printEvenOrOdd();
-askUser();
+runProgram();
 return 0;
 }
