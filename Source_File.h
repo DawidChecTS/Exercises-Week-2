@@ -31,10 +31,12 @@ bool isEven(int number);
 void printEvenOrOdd();
 void runProgram();
 void printConvertedValue(double value);
-double convertToCelsuis(double number);
-double convertToFarhenheit(double number);
+double convertToCelsius(double number);
+double convertToFahrenheit(double number);
 void printTempQuestion();
 void printErrorMessege();
 bool isUserInputValid();
 void runProgram();
+void printTheMenuAndTakeInChoice();
+void getChoice(double &value);
 #endif
