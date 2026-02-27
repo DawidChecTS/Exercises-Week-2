@@ -371,13 +371,12 @@ void runProgram(){
                     if(userChoice == 1)
                     {
                     convertedTemp = convertToFahrenheit(userTemp);
-                    printConvertedValue(convertedTemp);
                     }
                     else 
                     {
                     convertedTemp = convertToCelsius(userTemp);
-                    printConvertedValue(convertedTemp);
                     }
+                    printConvertedValue(convertedTemp);
                 }
             }     
         else {printErrorMessege();}   
