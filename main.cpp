@@ -16,6 +16,7 @@ int main()
 //generateRandomNumbers();
 //askForInput();
 //printEvenOrOdd();
-runProgram();
+//runProgram();
+trainingSwitch();
 return 0;
 }

@@ -382,3 +382,29 @@ void runProgram(){
         else {printErrorMessege();}   
     }
 }
+
+void trainingSwitch(){
+    char degree;
+
+    cout << "What degree did you got?: " << endl;
+    cin >> degree;
+
+    switch(degree){
+        case 'A' :
+        cout << "A - You did great!";
+        break;
+        case 'B' :
+        cout << "B - Nice!";
+        break;
+        case 'C' :
+        cout << "C - Could be better.";
+        break;
+        case 'D' :
+        cout << "D - You kinda failed";
+        break;
+        default :
+        cout << "Wrong input!";
+        break;
+    }
+    
+}

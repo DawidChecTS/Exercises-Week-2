@@ -39,4 +39,5 @@ bool isUserInputValid();
 void runProgram();
 void printTheMenuAndTakeInChoice();
 void getChoice(double &value);
+void trainingSwitch();
 #endif
